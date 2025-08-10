@@ -39,7 +39,7 @@ st.title("📊 Sales Summary & Forecast AI Agent")
 # Sidebar
 with st.sidebar:
     st.header("Settings")
-    api_key = st.text_input("Enter your Gemini API Key", type="password")
+    api_key = st.text_input("Enter your Key", type="password")
     uploaded_file = st.file_uploader("Upload your sales CSV", type=["csv"])
     
     if api_key and uploaded_file:
