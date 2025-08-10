@@ -29,7 +29,7 @@ def forecast_with_confidence(monthly_revenue):
     next_month = np.array([[len(months)]])
     predicted = model.predict(next_month)[0]
 
-    # Calculate confidence interval
+    # Calculate confidence 
     y_pred = model.predict(X_test)
     mse = np.mean((y_test - y_pred) ** 2)
     std = np.sqrt(mse)

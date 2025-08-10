@@ -13,18 +13,18 @@ from gemini_agent import (
     generate_seasonal_insights, generate_customer_segments
 )
 
-# ---------------- PDF Generator ----------------
+# PDF Generator
 def create_pdf(report_text):
     buffer = BytesIO()
     p = canvas.Canvas(buffer, pagesize=letter)
     width, height = letter
 
-    # Write each line to PDF
+    
     y = height - 40
     for line in report_text.split("\n"):
         p.drawString(40, y, line)
         y -= 15
-        if y < 40:  # New page if needed
+        if y < 40:  
             p.showPage()
             y = height - 40
 
@@ -32,7 +32,7 @@ def create_pdf(report_text):
     buffer.seek(0)
     return buffer.getvalue()
 
-# ---------------- Streamlit App ----------------
+# Streamlit App 
 st.set_page_config(page_title="Sales Summary & Forecast AI", layout="wide")
 st.title("📊 Sales Summary & Forecast AI Agent")
 
