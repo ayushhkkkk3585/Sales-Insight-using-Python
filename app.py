@@ -147,4 +147,4 @@ if uploaded_file and api_key:
     except Exception as e:
         st.error(f"Error: {e}")
 else:
-    st.info("Please upload a sales CSV file and enter your Gemini API key to begin analysis.")
+    st.info("Please upload a sales CSV file to begin analysis.")
